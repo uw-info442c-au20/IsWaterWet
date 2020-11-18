@@ -3,7 +3,7 @@
 Is it?
 
 
-hi Guys ! 11/18/2020
-
 Tbh idk if water is wet
 do fish need to take showers?
+
+Goats def need showers
