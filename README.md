@@ -7,9 +7,9 @@ Tbh idk if water is wet
 do fish need to take showers?
 
 Goats def need showers
+change our project to goats!
 
 <<<<<<< HEAD
-Hi change our project to goats!
 =======
 Use local storage to keep track of fish and events client based instead of user based
 Screen showing two different users (very active, and more casual)
