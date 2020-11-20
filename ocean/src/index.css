@@ -19,13 +19,29 @@ code {
 
 .aquarium-background {
   /* The image used */
-  background-image: url("img/Aquarium.jpg");
+  background-image: url("img/Aquarium2.jpeg");
 
   /* Full height */
-  height: 100%;
+  height: 100vh;
 
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.menu {
+  background-color: aliceblue;
+  color: black;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.fish-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.fish-menu img {
+  height: 100px;
 }
