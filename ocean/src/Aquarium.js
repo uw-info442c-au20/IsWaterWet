@@ -18,7 +18,23 @@ class Fish extends Component{
     render(){
         return(
             <div className= "fish">
-                {this.fishImg("img/Cartoon-Clownfish.png")}              
+                <TweenOne
+                 animation={{ 
+                    x:1000,
+                    yoyo: true,
+                    repeat: -1, 
+                    duration: 10000
+                }}>
+                    <TweenOne 
+                    animation={{ 
+                        y:20,
+                        yoyo: true,
+                        repeat: -1, 
+                        duration: 1000
+                    }}>
+                        {this.fishImg("img/Cartoon-Clownfish.png")}    
+                    </TweenOne>
+                </TweenOne>
             </div>
         )
     }
@@ -30,8 +46,6 @@ class Fish extends Component{
     movement(){
         
     }
-
-
 }
 
 class MenuController extends Component{
