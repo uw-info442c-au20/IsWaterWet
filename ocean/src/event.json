@@ -1,18 +1,18 @@
 {
     "events": [
         {
-            "ID": "",
-            "date": "",
-            "title": "",
-            "description": "",
-            "fish": ""
+            "ID": "01",
+            "date": "12/12/20",
+            "title": "Golden Gardens Beach Trash Pickup",
+            "description": "Come out for some trash pickup on Saturday, Dec. 12 at Golden Gardens! We will be leaving from UW at 1pm from in front of Schmitz. Hope ya'll come out!",
+            "fish": "jelly"
         },
         {
-            "ID": "",
-            "date": "",
-            "title": "",
-            "description": "",
-            "fish": ""
+            "ID": "02",
+            "date": "12/15/20",
+            "title": "Alki Beach Trash Pickup",
+            "description": "Come out to pick up some trash on Alki Beach! It'll be on Tuesday, Dec. 15 and we will leave UW at 12pm from Willow Hall. Let's go make the world a better place!",
+            "fish": "cuttle"
         }
     ]
 }
