@@ -18,16 +18,15 @@ code {
 }
 
 .aquarium-background {
-  /* The image used */
   background-image: url("img/Aquarium2.jpeg");
-
-  /* Full height */
   height: 100vh;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.fish img {
+  width: 180px;
 }
 
 .menu-controller {
@@ -45,6 +44,7 @@ code {
   width: 100%;
   border-radius: 20px;
   padding-top: 50px;
+  position: relative;
 }
 
 .fish-menu {
