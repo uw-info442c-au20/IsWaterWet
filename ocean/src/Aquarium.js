@@ -1,6 +1,8 @@
 import React, { Component } from 'react'; 
 import TweenOne from 'rc-tween-one';
 
+const windowWidth = window.innerWidth - 180
+
 class Aquarium extends Component {
     render() {
         return (
@@ -22,13 +24,13 @@ class Fish extends Component{
         super(props);
         this.switchImage = this.switchImage.bind(this);
         let fishSpeed = 0
-        if(props.fish == 'clown-fish'){
+        if(props.fish === 'clown-fish'){
             fishSpeed = 10000
-        } else  if(props.fish == 'jelly-fish'){
+        } else  if(props.fish === 'jelly-fish'){
             fishSpeed = 50000
-        } else  if(props.fish == 'yellow-tang'){
+        } else  if(props.fish === 'yellow-tang'){
             fishSpeed = 7000
-        } else if (props.fish == 'cuttle-fish'){
+        } else if (props.fish === 'cuttle-fish'){
             fishSpeed = 25000
         }
 
@@ -68,7 +70,7 @@ class Fish extends Component{
 
         
         if(this.state.fish=== "clown-fish"){
-            if(this.state.img == 1){
+            if(this.state.img === 1){
                 clownFishIMG = "img/Cartoon-Clownfish.png"
             } else {
                 clownFishIMG = "img/Cartoon-Clownfish2.png"
@@ -76,7 +78,7 @@ class Fish extends Component{
         }
 
         if(this.state.fish=== "yellow-tang"){
-            if(this.state.img == 1){
+            if(this.state.img === 1){
                 yellowTangIMG = "img/Cartoon-Yellowtang.png"
             } else {
                 yellowTangIMG = "img/Cartoon-Yellowtang2.png"
@@ -84,7 +86,7 @@ class Fish extends Component{
         }
 
         if(this.state.fish=== "cuttle-fish"){
-            if(this.state.img == 1){
+            if(this.state.img === 1){
                 cuttleFishIMG = "img/Cartoon-Cuttlefish.png"
             } else {
                 cuttleFishIMG = "img/Cartoon-Cuttlefish2.png"
@@ -92,7 +94,7 @@ class Fish extends Component{
         }   
 
         if(this.state.fish=== "jelly-fish"){
-            if(this.state.img == 1){
+            if(this.state.img === 1){
                 jellyFishIMG = "img/Cartoon-Jellyfish.png"
             } else {
                 jellyFishIMG = "img/Cartoon-Jellyfish2.png"
@@ -103,7 +105,7 @@ class Fish extends Component{
         let clownFish = (<div className= "fish">
         <TweenOne
          animation={{ 
-            x:1000,
+            x: windowWidth,
             yoyo: true,
             repeat: -1, 
             duration: this.state.speed
@@ -123,7 +125,7 @@ class Fish extends Component{
         let cuttleFish = (<div className= "fish">
         <TweenOne
         animation={{ 
-            x:1000,
+            x: windowWidth,
             yoyo: true,
             repeat: -1, 
             duration: this.state.speed
@@ -143,7 +145,7 @@ class Fish extends Component{
         let jellyFish = (<div className= "fish">
         <TweenOne
         animation={{ 
-            x:1000,
+            x: windowWidth,
             yoyo: true,
             repeat: -1, 
             duration: this.state.speed
@@ -163,7 +165,7 @@ class Fish extends Component{
         let yellowTang = (<div className= "fish">
             <TweenOne
             animation={{ 
-                x:1000,
+                x: windowWidth,
                 yoyo: true,
                 repeat: -1, 
                 duration: this.state.speed
