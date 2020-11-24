@@ -32,7 +32,7 @@ code {
 .menu-controller {
   position: absolute;
   bottom: 0;
-  left: 40%;
+  left: 50vw;
   width: 100%;
   color: aliceblue;
   text-shadow: 2px 2px 1px #505050;

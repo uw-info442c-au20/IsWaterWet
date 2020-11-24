@@ -199,7 +199,16 @@ class MenuController extends Component{
     render(){
         return(
             <div class="menu-controller">
-                <h1>AQUARIUM     EVENTS</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <h1>AQUARIUM</h1>
+                        </li>
+                        <li>
+                            <h1>EVENTS</h1>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         )
     }
