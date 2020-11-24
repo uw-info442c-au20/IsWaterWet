@@ -15,10 +15,10 @@ class FishMenu extends Component{
     render(){
         return(
             <div className = "fish-menu">
-                <img src="img/Real-Clownfish.png" />
-                <img src="img/Real-Jellyfish.png" />
-                <img src="img/Real-Cuttlefish.png" />
-                <img src="img/Real-Yellowtang.png" />
+                <img className = "img" src="img/Real-Jellyfish.png" />
+                <img className = "img" src="img/Real-Clownfish.png" />
+                <img className = "img" src="img/Real-Cuttlefish.png" />
+                <img className = "img" src="img/Real-Yellowtang.png" />
             </div>
         )
     }

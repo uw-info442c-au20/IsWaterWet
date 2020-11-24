@@ -7,11 +7,12 @@ class Aquarium extends Component {
     render() {
         return (
              <div className="aquarium-background">
+                 <MenuController/>
                  <Fish fish="clown-fish"/>
                  <Fish fish="jelly-fish"/>
                  <Fish fish="yellow-tang"/>
                  <Fish fish="cuttle-fish"/>
-                 <MenuController/>
+                 
              </div>
         );
     }
@@ -132,7 +133,7 @@ class Fish extends Component{
         }}>
             <TweenOne 
             animation={{ 
-                y:350,
+                y:0,
                 yoyo: true,
                 repeat: -1, 
                 duration: 1000
@@ -199,7 +200,8 @@ class MenuController extends Component{
     render(){
         return(
             <div class="menu-controller">
-                <h1>AQUARIUM     EVENTS</h1>
+                <h1>AQUARIUM</h1>
+                <h1>EVENTS</h1>
             </div>
         )
     }
