@@ -8,12 +8,10 @@ class Aquarium extends Component {
     render() {
         return (
              <div className="aquarium-background">
-                 <div className="fish-container">
                  <Fish fish="clown-fish"/>
                  <Fish fish="jelly-fish"/>
                  <Fish fish="yellow-tang"/>
                  <Fish fish="cuttle-fish"/>
-                 </div>
                  <MenuController/>
              </div>
         );

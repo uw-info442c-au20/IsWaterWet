@@ -4,10 +4,10 @@ class Menu extends Component{
     constructor(props){
         super(props);
         this.state = {
-          user: this.props.user
+          user: this.props.user,
+          events: this.props.events
         }
       }
-
 
     render(){
 
@@ -20,7 +20,7 @@ class Menu extends Component{
         return(
             <div className = "menu">
                 <FishMenu/>
-                <EventsList events={events}/>
+                {/*<EventsList events={this.props.events}/>*/}
             </div>
         )
     }
@@ -41,6 +41,14 @@ class FishMenu extends Component{
 }
 
 class EventsList extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+          events: this.props.events
+        }
+      }
+
+
     render(){
         let items = this.props.events.map(function (event) {
             return (

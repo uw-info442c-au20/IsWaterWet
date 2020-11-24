@@ -5,10 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import kataraUser from './katara.json';
 import zukoUser from './zuko.json';
+import events from './event.json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App user={kataraUser}/>
+    <App user={kataraUser} events = {events}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
