@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import kataraUser from './katara.json';
+import zukoUser from './zuko.json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App user = {kataraUser} />
   </React.StrictMode>,
   document.getElementById('root')
 );
