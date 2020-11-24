@@ -8,7 +8,7 @@ import zukoUser from './zuko.json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App user = {kataraUser} />
+    <App/> 
   </React.StrictMode>,
   document.getElementById('root')
 );

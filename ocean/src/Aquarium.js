@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import TweenOne from 'rc-tween-one';
 
 const windowWidth = window.innerWidth - 180
+const windowHeight = window.innerHeight
 
 class Aquarium extends Component {
     render() {
         return (
              <div className="aquarium-background">
+                 <div className="fish-container">
                  <Fish fish="clown-fish"/>
                  <Fish fish="jelly-fish"/>
                  <Fish fish="yellow-tang"/>
                  <Fish fish="cuttle-fish"/>
+                 </div>
                  <MenuController/>
              </div>
         );
@@ -19,7 +22,6 @@ class Aquarium extends Component {
 
 class Fish extends Component{
 //I need to change the 10000 to a constant or something
-
     constructor(props) {
         super(props);
         this.switchImage = this.switchImage.bind(this);
@@ -198,9 +200,9 @@ class Fish extends Component{
 class MenuController extends Component{
     render(){
         return(
-            <div class="menu-controller">
+            <div className="menu-controller">
                 <nav>
-                    <ul>
+                    <ul className="menu-list">
                         <li>
                             <h1>AQUARIUM</h1>
                         </li>

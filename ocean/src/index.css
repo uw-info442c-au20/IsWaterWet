@@ -47,6 +47,11 @@ code {
   position: relative;
 }
 
+.menu-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .fish-menu {
   display: flex;
   flex-direction: row;

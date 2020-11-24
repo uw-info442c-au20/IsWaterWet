@@ -5,6 +5,7 @@ class Menu extends Component{
         return(
             <div className = "menu">
                 <FishMenu/>
+                <EventMenu/>
             </div>
         )
     }
@@ -25,7 +26,7 @@ class FishMenu extends Component{
 }
 
 class EventMenu extends Component{
-
+    
 }
 
 export default Menu;
