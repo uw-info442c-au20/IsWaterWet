@@ -134,7 +134,7 @@ class Fish extends Component{
         }}>
             <TweenOne 
             animation={{ 
-                y:350,
+                y:0,
                 yoyo: true,
                 repeat: -1, 
                 duration: 1000
