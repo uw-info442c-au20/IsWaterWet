@@ -6,7 +6,7 @@ class Menu extends Component{
         super(props);
         this.state = {
             user: this.props.user,
-            /* events: this.props.events */
+            eventsJSON: this.props.events,
             events: [
                 {
                     "ID": "01",
@@ -35,6 +35,7 @@ class Menu extends Component{
       }
 
     render(){
+        console.log(this.state.eventsJSON)
         return(
             <div className = "menu">
                {this.whichMenu()}

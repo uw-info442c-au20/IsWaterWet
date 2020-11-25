@@ -34,6 +34,8 @@ code {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
+  top: 0;
+  right: 0;
   width: 100%;
   text-align: center;
   z-index: 15;

@@ -30,8 +30,8 @@ export class App extends Component {
     console.log("I am rendering: " + this.state.menuStatus)
     return (
       <div className="App">
-        <Aquarium/>
         <MenuController switchMenuStatus={this.switchMenuStatus}/>
+        <Aquarium/>
         <Menu user={this.state.user} events={this.state.events} menuStatus={this.state.menuStatus}/>
         <Footer/>  
       </div>
