@@ -10,14 +10,16 @@ class Menu extends Component{
             events: [
                 {
                     "ID": "01",
-                    "date": "12/12/20",
+                    "month": "DEC",
+                    "day": "12",
                     "title": "Golden Gardens Beach Trash Pickup",
                     "description": "Come out for some trash pickup on Saturday, Dec. 12 at Golden Gardens! We will be leaving from UW at 1pm from in front of Schmitz. Hope ya'll come out!",
                     "fish": "jelly"
                 },
                 {
                     "ID": "02",
-                    "date": "12/15/20",
+                    "month": "DEC",
+                    "day": "15",
                     "title": "Alki Beach Trash Pickup",
                     "description": "Come out to pick up some trash on Alki Beach! It'll be on Tuesday, Dec. 15 and we will leave UW at 12pm from Willow Hall. Let's go make the world a better place!",
                     "fish": "cuttle"
@@ -62,9 +64,11 @@ class FishMenu extends Component{
 class EventMenu extends Component{
     render() {
         return (
-            <div>
+            <div className="events-list">
                 <h1>Upcoming Events</h1>
-                <EventsList events={this.props.events}/>
+                <div className="list">
+                    <EventsList events={this.props.events}/>
+                </div>
             </div>
         );
     }
@@ -105,12 +109,24 @@ class EventListItem extends Component{
 
     render() {
         return (
-            <div class="dropdown">
-                <a active={false} onClick={this.handleClick} class="dropbtn">{this.props.event.date} {this.props.event.title} </a>
-                <div id="myDropdown" class="dropdown-content"  style={{display: this.state.isToggle ? 'block': 'none'}}>
+            <div class="events">
+                <div class = "date">
+                    <a>{this.props.event.day}</a>
+                    <a>{this.props.event.month}</a>
+                </div>
+                <div class="description">
                     <a>{this.props.event.description}</a>
                 </div>
             </div>
+
+            // <div class="dropdown">
+            //     <div class = "drop">
+            //     <a active={false} onClick={this.handleClick} class="dropbtn">{this.props.event.date} {this.props.event.title} </a>
+            //     </div>
+            //     <div id="myDropdown" class="dropdown-content"  style={{display: this.state.isToggle ? 'block': 'none'}}>
+            //         <a>{this.props.event.description}</a>
+            //     </div>
+            // </div>
         )
     }
 }

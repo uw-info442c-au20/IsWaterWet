@@ -30,43 +30,58 @@ code {
   width: 180px;
 }
 
-.menu-controller {
+.menu-controller{
   position: absolute;
+  margin-bottom: 0rem;
+  margin-top: 34rem;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   text-align: center;
   z-index: 15;
   background-color: transparent;
+  /* display: flex; */
+  /* flex-direction: row; */
 }
 
-.menu-controller ul {
+.menu-list ul {
   list-style: none;
+  display: inline;
 }
 
-.menu-controller h1 {
+.menu-list h1 {
   display: inline-block;
-  padding-right: 3rem;
+  padding-right: 2rem;
   font-size: 1.5rem;
   font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   color: aliceblue;
-  /* padding-left: 2rem; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding-left: 2rem;
 }
 
-.menu-list {
-  display: flex;
-  flex-direction: row;
+/* .menu-list h1:hover {
+  color: rgb(111, 204, 241);
+  font-weight: 400;
+} */
+
+.menu-list:active {
+  color: rgb(111, 204, 241);
+  font-weight: 400;
 }
+
 
 .menu {
   background-color: #062541;
   color: black;
-  width: 100%;
+  /* width: 100%; */
   /* border-radius: 20px; */
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 4rem;
+  /* padding-right: 20rem; */
   position: relative;
+  min-height: 20rem;
 }
 
 .fish-menu {
@@ -95,6 +110,7 @@ footer {
   background-color: #0b1a2e;
   background-image: url("img/bubbles.png");
   width: 100%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -121,3 +137,60 @@ footer h1 {
   margin: auto;
   text-align: center;
 }
+
+
+/* With Dropdown */
+
+.events-list h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: aliceblue;
+  padding-left: 2rem;
+}
+.events {
+  margin-left: 2rem;
+  display: flex;
+  
+}
+
+.events .date{
+  margin-bottom: 2rem;
+  background-color: blueviolet;
+  display: inline-block;
+  
+}
+.events .description{
+  margin-bottom: 2rem;
+  background-color: black;
+  color: aliceblue;
+  display: inline-block;
+  padding: 2rem;
+  width: 50vh;
+}
+
+.events .date a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: aliceblue;
+  display: flex;
+  padding: 1rem 2rem 0rem 2rem;
+}
+
+/* .dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #143450;
+  color: rgb(233, 233, 233);
+}
+
+.drop a {
+  display: flex;
+  padding: 2rem;
+}
+
+.dropdown-content{
+  padding: 2rem;
+  background-color: #143450;
+} */
