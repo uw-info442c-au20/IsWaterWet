@@ -37,6 +37,7 @@ code {
   background-color: white;
   border-radius: 100px;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .profile:hover h1 {

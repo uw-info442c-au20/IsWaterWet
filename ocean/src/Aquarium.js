@@ -13,7 +13,6 @@ class Aquarium extends Component {
         }
     } 
 
-
     fish = () =>{
 
             let items = this.props.user.fish.map(function (fish) {
@@ -33,13 +32,8 @@ class Aquarium extends Component {
 
 
     render() {
-       //this.fishLog()
         return (
              <div className="aquarium-background">
-         {/*         <Fish fish="clown-fish"/>
-                 <Fish fish="jelly-fish"/>
-                 <Fish fish="yellow-tang"/>
-                 <Fish fish="cuttle-fish"/> */} 
                   {this.fish()} 
              </div>
         );
