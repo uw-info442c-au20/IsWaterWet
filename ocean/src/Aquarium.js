@@ -111,7 +111,7 @@ class Fish extends Component{
         }}>
             <TweenOne 
             animation={{ 
-                y:windowHeight/10,
+                y:windowHeight/12,
                 yoyo: true,
                 repeat: -1, 
                 duration: 1000
@@ -151,7 +151,7 @@ class Fish extends Component{
         }}>
             <TweenOne 
             animation={{ 
-                y:windowHeight/5,
+                y:windowHeight/3,
                 yoyo: true,
                 repeat: -1, 
                 duration: 3000
@@ -171,7 +171,7 @@ class Fish extends Component{
             }}>
                 <TweenOne 
                 animation={{ 
-                    y:windowHeight/15,
+                    y:windowHeight/20,
                     yoyo: true,
                     repeat: -1, 
                     duration: 400

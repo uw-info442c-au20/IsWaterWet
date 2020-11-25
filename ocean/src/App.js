@@ -32,6 +32,7 @@ export class App extends Component {
       <div className="App">
         <MenuController switchMenuStatus={this.switchMenuStatus}/>
         <Aquarium/>
+        
         <Menu user={this.state.user} events={this.state.events} menuStatus={this.state.menuStatus}/>
         <Footer/>  
       </div>
@@ -56,12 +57,12 @@ class MenuController extends Component{
           <div className="menu-controller">
               <nav>
               <ul className="menu-list">
-                      <li>
+                      <ul>
                           <h1 onClick={this.aquariumHandleClick}>AQUARIUM</h1>
-                      </li>
-                      <li >
+                      </ul>
+                      <ul >
                           <h1 onClick={this.eventsHandleClick}>EVENTS</h1>
-                      </li>
+                      </ul>
                   </ul>
               </nav>
           </div>

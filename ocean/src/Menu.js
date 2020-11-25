@@ -30,12 +30,12 @@ class Menu extends Component{
           if(this.props.menuStatus === 'aquarium'){
             return (<FishMenu/>)
           } else if(this.props.menuStatus ==='events'){
-            return(<EventMenu events={this.state.events}/>)
+            return(<EventMenu events={this.state.eventsJSON}/>)
           }
       }
 
     render(){
-        console.log(this.state.eventsJSON)
+        console.log(this.state.eventsJSON) //It looks like it is here!
         return(
             <div className = "menu">
                {this.whichMenu()}
@@ -75,7 +75,7 @@ class EventMenu extends Component{
 //All of the different events compiled within a list
 class EventsList extends Component{
     render(){
-        let items = this.props.events.map(function (event) {
+        let items = this.props.events.events.map(function (event) {
             return (
                 <EventListItem key={event.id} event={event} />
             )
