@@ -106,12 +106,24 @@ class EventListItem extends Component{
 
     render() {
         return (
-            <div class="dropdown">
-                <a active={false} onClick={this.handleClick} class="dropbtn">{this.props.event.date} {this.props.event.title} </a>
-                <div id="myDropdown" class="dropdown-content"  style={{display: this.state.isToggle ? 'block': 'none'}}>
-                    <a>{this.props.event.description}</a>
-                </div>
+            <div class="events">
+            <div class = "date">
+                <a>{this.props.event.day}</a>
+                <a>{this.props.event.month}</a>
             </div>
+            <div class="description">
+                <a>{this.props.event.description}</a>
+            </div>
+        </div>
+
+        // <div class="dropdown">
+        //     <div class = "drop">
+        //     <a active={false} onClick={this.handleClick} class="dropbtn">{this.props.event.date} {this.props.event.title} </a>
+        //     </div>
+        //     <div id="myDropdown" class="dropdown-content"  style={{display: this.state.isToggle ? 'block': 'none'}}>
+        //         <a>{this.props.event.description}</a>
+        //     </div>
+        // </div>
         )
     }
 }

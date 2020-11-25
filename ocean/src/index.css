@@ -64,13 +64,13 @@ code {
 }
 
 .menu-list h1:hover {
-  color: rgb(111, 204, 241);
-  cursor: auto;
+  color: rgb(143, 204, 228);
+  cursor: pointer;
 }
 
-.menu-list:active {
+.menu-list h1.selected {
   color: rgb(111, 204, 241);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .menu {

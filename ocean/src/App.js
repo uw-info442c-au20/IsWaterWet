@@ -26,11 +26,11 @@ export class App extends Component {
     console.log(this.state.menuStatus)
   }
 
-  render(){
+  render(){  
     console.log("I am rendering: " + this.state.menuStatus)
     return (
       <div className="App">
-        <MenuController switchMenuStatus={this.switchMenuStatus}/>
+        <MenuController switchMenuStatus={this.switchMenuStatus} menuStatus={this.state.menuStatus}/>
         <Aquarium/>
         
         <Menu user={this.state.user} events={this.state.events} menuStatus={this.state.menuStatus}/>
@@ -51,6 +51,22 @@ class MenuController extends Component{
     console.log("it should be events")
   }
 
+  aquarium = () => {
+    if(this.props.menuStatus === 'aquarium'){
+    return (<h1 className = 'selected' onClick={this.aquariumHandleClick}>AQUARIUM</h1>)
+    } else {
+      return (<h1 onClick={this.aquariumHandleClick}>AQUARIUM</h1>)
+    }
+  }
+
+  events = () => {
+    if(this.props.menuStatus === 'events'){
+    return (<h1 className = 'selected' onClick={this.eventsHandleClick}>EVENTS</h1>)
+    } else {
+      return (<h1 onClick={this.eventsHandleClick}>EVENTS</h1>)
+    }
+  }
+
 
   render(){
       return(
@@ -58,10 +74,10 @@ class MenuController extends Component{
               <nav>
               <ul className="menu-list">
                       <ul>
-                          <h1 onClick={this.aquariumHandleClick}>AQUARIUM</h1>
+                          {this.aquarium()}
                       </ul>
                       <ul >
-                          <h1 onClick={this.eventsHandleClick}>EVENTS</h1>
+                          {this.events()}
                       </ul>
                   </ul>
               </nav>
