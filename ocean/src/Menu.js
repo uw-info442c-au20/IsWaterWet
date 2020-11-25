@@ -1,4 +1,5 @@
 import React, { Component } from 'react'; 
+import Aquarium from './Aquarium';
 
 class Menu extends Component{
     constructor(props){
@@ -9,18 +10,18 @@ class Menu extends Component{
         }
       }
 
+      whichMenu = () => {
+          if(this.props.menuStatus === 'aquarium'){
+            return (<FishMenu/>)
+          } else if(this.props.menuStatus ==='events'){
+            return(/*What ever we need for the events menu*/<div/>)
+          }
+      }
+
     render(){
-
-        // placeholder events array. need to pull from events.json
-        let events = [
-            {title: 'Golden Gardens', description: 'Come out for some trash pickup on Saturday, Dec. 12 at Golden Gardens! We will be leaving from UW at 1pm from in front of Schmitz. Hope yall come out!'},
-            {title: 'Alki Beach', description: '"Come out to pick up some trash on Alki Beach! Itll be on Tuesday, Dec. 15 and we will leave UW at 12pm from Willow Hall. Lets go make the world a better place!"'},
-        ]
-
         return(
             <div className = "menu">
-                <FishMenu/>
-                {/*<EventsList events={this.props.events}/>*/}
+               {this.whichMenu()}
             </div>
         )
     }

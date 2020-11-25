@@ -12,7 +12,6 @@ class Aquarium extends Component {
                  <Fish fish="jelly-fish"/>
                  <Fish fish="yellow-tang"/>
                  <Fish fish="cuttle-fish"/>
-                 <MenuController/>
              </div>
         );
     }
@@ -112,7 +111,7 @@ class Fish extends Component{
         }}>
             <TweenOne 
             animation={{ 
-                y:20,
+                y:windowHeight/10,
                 yoyo: true,
                 repeat: -1, 
                 duration: 1000
@@ -132,7 +131,7 @@ class Fish extends Component{
         }}>
             <TweenOne 
             animation={{ 
-                y:0,
+                y:windowHeight/7,
                 yoyo: true,
                 repeat: -1, 
                 duration: 1000
@@ -152,7 +151,7 @@ class Fish extends Component{
         }}>
             <TweenOne 
             animation={{ 
-                y:500,
+                y:windowHeight/5,
                 yoyo: true,
                 repeat: -1, 
                 duration: 3000
@@ -172,7 +171,7 @@ class Fish extends Component{
             }}>
                 <TweenOne 
                 animation={{ 
-                    y:80,
+                    y:windowHeight/15,
                     yoyo: true,
                     repeat: -1, 
                     duration: 400
@@ -192,25 +191,6 @@ class Fish extends Component{
         return yellowTang
     }
 
-    }
-}
-
-class MenuController extends Component{
-    render(){
-        return(
-            <div className="menu-controller">
-                <nav>
-                    <ul className="menu-list">
-                        <li>
-                            <h1>AQUARIUM</h1>
-                        </li>
-                        <li>
-                            <h1>EVENTS</h1>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        )
     }
 }
 
