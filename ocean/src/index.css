@@ -15,6 +15,45 @@ code {
   width: 100%;
 }
 
+.profile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.profile h1 {
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.profile:hover {
+  background-color: white;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.profile:hover h1 {
+  color: #062541;
+}
+
+.profile h1 {
+  color: white;
+  margin-left: 1rem;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+}
+
 .aquarium-background {
   background-image: url("img/Aquarium2.png");
   height: 40rem;
@@ -66,6 +105,7 @@ code {
 .menu-list h1:hover {
   color: rgb(143, 204, 228);
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .menu-list h1.selected {

@@ -5,6 +5,10 @@ import Aquarium from './Aquarium';
 import Menu from './Menu';
 import Footer from './Footer'
 
+import kataraUser from './katara.json';
+import zukoUser from './zuko.json';
+
+
 export class App extends Component {
   constructor(props){
     super(props);
@@ -12,6 +16,22 @@ export class App extends Component {
       user: this.props.user,
       events: this.props.events,
       menuStatus: "aquarium"
+    }
+  }
+
+  switchUser = () =>{
+    if(this.state.user.user === "Katara"){
+      console.log("switching to zuko")
+      this.setState((currState) => {
+        let stateChanges = { user: zukoUser};
+        return stateChanges;
+      }); 
+    } else {
+      console.log("switching to katara")
+     this.setState((currState) => {
+        let stateChanges = { user: kataraUser};
+        return stateChanges;
+      });
     }
   }
 
@@ -31,12 +51,28 @@ export class App extends Component {
     return (
       <div className="App">
         <MenuController switchMenuStatus={this.switchMenuStatus} menuStatus={this.state.menuStatus}/>
-        <Aquarium/>
-        
+        <Aquarium user={this.state.user}/>
+      <UserProfile user={this.state.user} switchUser={this.switchUser}/>
         <Menu user={this.state.user} events={this.state.events} menuStatus={this.state.menuStatus}/>
         <Footer/>  
       </div>
     );
+  }
+}
+
+class UserProfile extends Component{
+
+profileHandleClick = (event) =>{
+  this.props.switchUser()
+}
+
+  render(){
+    return(
+      <div className="profile" onClick={this.profileHandleClick}>
+        <img src={this.props.user.pic} alt="profile pic"/>
+        <h1>{this.props.user.user.toUpperCase()}</h1>
+      </div>
+    )
   }
 }
 
