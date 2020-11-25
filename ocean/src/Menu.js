@@ -65,7 +65,9 @@ class EventMenu extends Component{
         return (
             <div>
                 <h1>Upcoming Events</h1>
-                <EventsList events={this.props.events}/>
+                <div class="event-contain" >
+                    <EventsList events={this.props.events}/>
+                </div>
             </div>
         );
     }
@@ -107,14 +109,25 @@ class EventListItem extends Component{
     render() {
         return (
             <div class="events">
-            <div class = "date">
-                <a>{this.props.event.day}</a>
-                <a>{this.props.event.month}</a>
+                <div class = "date">
+                    <a class = "day">{this.props.event.day}</a>
+                    <a class = "month">{this.props.event.month}</a>
+                </div>
+                <div class="description">
+                    <a class="title" >{this.props.event.title}</a>
+                    <a>{this.props.event.description}</a>
+                    <div class="attendance">
+                        <img src= "img/interested.png"></img>
+                        <a>{this.props.event.interested}</a>
+                        <img src= "img/going.png"></img>
+                        <a>{this.props.event.going}</a>
+                        <img src= "img/notgoing.png"></img>
+                        <a>{this.props.event.notgoing}</a>
+                    </div>
+                    
+                </div>
+           
             </div>
-            <div class="description">
-                <a>{this.props.event.description}</a>
-            </div>
-        </div>
 
         // <div class="dropdown">
         //     <div class = "drop">
