@@ -104,14 +104,14 @@ code {
 }
 
 .menu-list h1:hover {
-  color: rgb(143, 204, 228);
+  color: aliceblue;
   cursor: pointer;
-  transition: all 0.2s;
+  font-weight: 600;
 }
 
 .menu-list h1.selected {
-  color: rgb(111, 204, 241);
-  font-weight: 500;
+  color:aliceblue;
+  font-weight: 600;
 }
 
 .menu {
@@ -182,7 +182,7 @@ footer h1 {
 
 /* With Dropdown */
 
-.events-list h1 {
+.menu h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   font-weight: 400;
@@ -192,28 +192,69 @@ footer h1 {
 .events {
   margin-left: 2rem;
   display: flex;
+  flex-direction: row;
+}
+
+.event-contain a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .events .date {
   margin-bottom: 2rem;
-  background-color: blueviolet;
+  background-color: rgb(57, 29, 151);
   display: inline-block;
+  
 }
 .events .description {
   margin-bottom: 2rem;
   background-color: black;
   color: aliceblue;
   display: inline-block;
-  padding: 2rem;
-  width: 50vh;
+  padding: 1.1rem 1.1rem 1.1rem 1.1rem;
+  width: 60vh;
+  font-size: .75rem;
 }
 
-.events .date a {
-  font-size: 1rem;
-  font-weight: 400;
+.events .description .title{
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.events .date .day {
+  font-size: 2.5rem;
+  font-weight: 300;
   color: aliceblue;
   display: flex;
-  padding: 1rem 2rem 0rem 2rem;
+  padding: .5rem 1.5rem 0rem 1.5rem;
+}
+.events .date .month {
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: aliceblue;
+  display: flex;
+  padding: 0rem 2rem 1rem 1.75rem;
+}
+
+.events .description .attendance {
+  display: flex;
+  flex-direction: row;
+}
+
+.events .description .attendance a {
+  padding-right: 2rem;
+  padding-top: 2rem;
+  font-size: .85rem;
+}
+.events .description .attendance img {
+  padding-top: 2.2rem;
+  padding-right: .65rem;
+  height: .85rem;
+  width: .85rem;
 }
 
 /* .dropdown {

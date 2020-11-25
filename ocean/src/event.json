@@ -6,7 +6,10 @@
             "day": "12",
             "title": "Golden Gardens Beach Trash Pickup",
             "description": "Come out for some trash pickup on Saturday, Dec. 12 at Golden Gardens! We will be leaving from UW at 1pm from in front of Schmitz. Hope ya'll come out!",
-            "fish": "jelly"
+            "fish": "jelly",
+            "going": "10",
+            "interested": "25",
+            "notgoing": "5"
         },
         {
             "ID": "02",
