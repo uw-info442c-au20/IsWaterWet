@@ -55,15 +55,15 @@ class FishMenu extends Component{
                     )
                 } else if(fish === "jelly-fish"){
                     return (
-                        <img className = "img" src="img/Real-Jellyfish.png" alt="Clown Fish"/>
+                        <img className = "img" src="img/Real-Jellyfish.png" alt="Jelly Fish"/>
                     )
                 } else if(fish === "yellow-tang"){
                     return (
-                        <img className = "img" src="img/Real-Yellowtang.png" alt="Clown Fish"/>
+                        <img className = "img" src="img/Real-Yellowtang.png" alt="Yellowtang"/>
                     )
                 } else if(fish === "cuttle-fish"){
                     return (
-                        <img className = "img" src="img/Real-Cuttlefish.png" alt="Clown Fish"/>
+                        <img className = "img" src="img/Real-Cuttlefish.png" alt="Cuttle Fish"/>
                     )
                 }
             })
