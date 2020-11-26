@@ -41,7 +41,6 @@ class Aquarium extends Component {
 }
 
 class Fish extends Component{
-//I need to change the 10000 to a constant or something
     constructor(props) {
         super(props);
         this.switchImage = this.switchImage.bind(this);

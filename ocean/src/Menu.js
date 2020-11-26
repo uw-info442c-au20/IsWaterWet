@@ -28,7 +28,7 @@ class Menu extends Component{
 
       whichMenu = () => {
           if(this.props.menuStatus === 'aquarium'){
-            return (<FishMenu/>)
+            return (<FishMenu user={this.props.user}/>)
           } else if(this.props.menuStatus ==='events'){
             return(<EventMenu events={this.state.eventsJSON}/>)
           }
@@ -47,14 +47,31 @@ class Menu extends Component{
 
 class FishMenu extends Component{
     render(){
-        return(
-            <div className = "fish-menu">
-                <img className = "img" src="img/Real-Jellyfish.png" />
-                <img className = "img" src="img/Real-Clownfish.png" />
-                <img className = "img" src="img/Real-Cuttlefish.png" />
-                <img className = "img" src="img/Real-Yellowtang.png" />
-            </div>
-        )
+        console.log(this.props.user.fish)
+            let items = this.props.user.fish.map(function (fish) {
+                if(fish === "clown-fish"){
+                    return (
+                        <img className = "img" src="img/Real-Clownfish.png" alt="Clown Fish"/>
+                    )
+                } else if(fish === "jelly-fish"){
+                    return (
+                        <img className = "img" src="img/Real-Jellyfish.png" alt="Clown Fish"/>
+                    )
+                } else if(fish === "yellow-tang"){
+                    return (
+                        <img className = "img" src="img/Real-Yellowtang.png" alt="Clown Fish"/>
+                    )
+                } else if(fish === "cuttle-fish"){
+                    return (
+                        <img className = "img" src="img/Real-Cuttlefish.png" alt="Clown Fish"/>
+                    )
+                }
+            })
+            return (
+                <div className="fish-menu">
+                    {items}
+                </div>
+            )
     }
 }
 
