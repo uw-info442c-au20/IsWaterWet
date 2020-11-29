@@ -1,16 +1,3 @@
 # IsWaterWet
-???????????????????????????????????????????????
-Is it?
-
-
-Tbh idk if water is wet
-do fish need to take showers?
-
-Goats def need showers
-change our project to goats!
-
-<<<<<<< HEAD
-=======
-Use local storage to keep track of fish and events client based instead of user based
-Screen showing two different users (very active, and more casual)
->>>>>>> 16c3a2ce6073cb5c83b15b860af7a8c35a03f5a0
+Encouraging participation in ocean conservation and cleanup  
+Inspired by UN SDG #14: Life Below Water

@@ -6,20 +6,18 @@ class Menu extends Component{
         super(props);
         this.state = {
             user: this.props.user,
-            /* events: this.props.events */
+            eventsJSON: this.props.events,
             events: [
                 {
                     "ID": "01",
-                    "month": "DEC",
-                    "day": "12",
+                    "date": "12/12/20",
                     "title": "Golden Gardens Beach Trash Pickup",
                     "description": "Come out for some trash pickup on Saturday, Dec. 12 at Golden Gardens! We will be leaving from UW at 1pm from in front of Schmitz. Hope ya'll come out!",
                     "fish": "jelly"
                 },
                 {
                     "ID": "02",
-                    "month": "DEC",
-                    "day": "15",
+                    "date": "12/15/20",
                     "title": "Alki Beach Trash Pickup",
                     "description": "Come out to pick up some trash on Alki Beach! It'll be on Tuesday, Dec. 15 and we will leave UW at 12pm from Willow Hall. Let's go make the world a better place!",
                     "fish": "cuttle"
@@ -30,13 +28,14 @@ class Menu extends Component{
 
       whichMenu = () => {
           if(this.props.menuStatus === 'aquarium'){
-            return (<FishMenu/>)
+            return (<FishMenu user={this.props.user}/>)
           } else if(this.props.menuStatus ==='events'){
-            return(<EventMenu events={this.state.events}/>)
+            return(<EventMenu events={this.state.eventsJSON}/>)
           }
       }
 
     render(){
+        console.log(this.state.eventsJSON) //It looks like it is here!
         return(
             <div className = "menu">
                {this.whichMenu()}
@@ -48,14 +47,31 @@ class Menu extends Component{
 
 class FishMenu extends Component{
     render(){
-        return(
-            <div className = "fish-menu">
-                <img className = "img" src="img/Real-Jellyfish.png" />
-                <img className = "img" src="img/Real-Clownfish.png" />
-                <img className = "img" src="img/Real-Cuttlefish.png" />
-                <img className = "img" src="img/Real-Yellowtang.png" />
-            </div>
-        )
+        console.log(this.props.user.fish)
+            let items = this.props.user.fish.map(function (fish) {
+                if(fish === "clown-fish"){
+                    return (
+                        <img className = "img" src="img/Real-Clownfish.png" alt="Clown Fish"/>
+                    )
+                } else if(fish === "jelly-fish"){
+                    return (
+                        <img className = "img" src="img/Real-Jellyfish.png" alt="Jelly Fish"/>
+                    )
+                } else if(fish === "yellow-tang"){
+                    return (
+                        <img className = "img" src="img/Real-Yellowtang.png" alt="Yellowtang"/>
+                    )
+                } else if(fish === "cuttle-fish"){
+                    return (
+                        <img className = "img" src="img/Real-Cuttlefish.png" alt="Cuttle Fish"/>
+                    )
+                }
+            })
+            return (
+                <div className="fish-menu">
+                    {items}
+                </div>
+            )
     }
 }
 
@@ -64,9 +80,9 @@ class FishMenu extends Component{
 class EventMenu extends Component{
     render() {
         return (
-            <div className="events-list">
+            <div>
                 <h1>Upcoming Events</h1>
-                <div className="list">
+                <div class="event-contain" >
                     <EventsList events={this.props.events}/>
                 </div>
             </div>
@@ -78,7 +94,7 @@ class EventMenu extends Component{
 //All of the different events compiled within a list
 class EventsList extends Component{
     render(){
-        let items = this.props.events.map(function (event) {
+        let items = this.props.events.events.map(function (event) {
             return (
                 <EventListItem key={event.id} event={event} />
             )
@@ -111,22 +127,33 @@ class EventListItem extends Component{
         return (
             <div class="events">
                 <div class = "date">
-                    <a>{this.props.event.day}</a>
-                    <a>{this.props.event.month}</a>
+                    <a class = "day">{this.props.event.day}</a>
+                    <a class = "month">{this.props.event.month}</a>
                 </div>
                 <div class="description">
+                    <a class="title" >{this.props.event.title}</a>
                     <a>{this.props.event.description}</a>
+                    <div class="attendance">
+                        <img src= "img/interested.png"></img>
+                        <a>{this.props.event.interested}</a>
+                        <img src= "img/going.png"></img>
+                        <a>{this.props.event.going}</a>
+                        <img src= "img/notgoing.png"></img>
+                        <a>{this.props.event.notgoing}</a>
+                    </div>
+                    
                 </div>
+           
             </div>
 
-            // <div class="dropdown">
-            //     <div class = "drop">
-            //     <a active={false} onClick={this.handleClick} class="dropbtn">{this.props.event.date} {this.props.event.title} </a>
-            //     </div>
-            //     <div id="myDropdown" class="dropdown-content"  style={{display: this.state.isToggle ? 'block': 'none'}}>
-            //         <a>{this.props.event.description}</a>
-            //     </div>
-            // </div>
+        // <div class="dropdown">
+        //     <div class = "drop">
+        //     <a active={false} onClick={this.handleClick} class="dropbtn">{this.props.event.date} {this.props.event.title} </a>
+        //     </div>
+        //     <div id="myDropdown" class="dropdown-content"  style={{display: this.state.isToggle ? 'block': 'none'}}>
+        //         <a>{this.props.event.description}</a>
+        //     </div>
+        // </div>
         )
     }
 }

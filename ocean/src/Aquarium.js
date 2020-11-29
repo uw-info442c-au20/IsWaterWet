@@ -5,20 +5,42 @@ const windowWidth = window.innerWidth - 180
 const windowHeight = window.innerHeight
 
 class Aquarium extends Component {
+
+    fishLog = () =>{
+        let fishes = this.props.user.fish
+        for(let item in fishes){
+            console.log(fishes[item])
+        }
+    } 
+
+    fish = () =>{
+
+            let items = this.props.user.fish.map(function (fish) {
+                console.log(fish)    
+                return (
+                    <Fish fish={fish} />
+                ) 
+            })
+            console.log(items)
+            return (
+                <div>
+                    {items}
+                </div>
+            )
+        
+    }
+
+
     render() {
         return (
              <div className="aquarium-background">
-                 <Fish fish="clown-fish"/>
-                 <Fish fish="jelly-fish"/>
-                 <Fish fish="yellow-tang"/>
-                 <Fish fish="cuttle-fish"/>
+                  {this.fish()} 
              </div>
         );
     }
 }
 
 class Fish extends Component{
-//I need to change the 10000 to a constant or something
     constructor(props) {
         super(props);
         this.switchImage = this.switchImage.bind(this);
@@ -111,7 +133,7 @@ class Fish extends Component{
         }}>
             <TweenOne 
             animation={{ 
-                y:windowHeight/10,
+                y:windowHeight/12,
                 yoyo: true,
                 repeat: -1, 
                 duration: 1000
@@ -151,7 +173,7 @@ class Fish extends Component{
         }}>
             <TweenOne 
             animation={{ 
-                y:windowHeight/5,
+                y:windowHeight/3,
                 yoyo: true,
                 repeat: -1, 
                 duration: 3000
@@ -171,7 +193,7 @@ class Fish extends Component{
             }}>
                 <TweenOne 
                 animation={{ 
-                    y:windowHeight/15,
+                    y:windowHeight/20,
                     yoyo: true,
                     repeat: -1, 
                     duration: 400

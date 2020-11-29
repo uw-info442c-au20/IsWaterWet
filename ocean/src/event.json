@@ -2,17 +2,157 @@
     "events": [
         {
             "ID": "01",
-            "date": "12/12/20",
-            "title": "Golden Gardens Beach Trash Pickup",
+            "month": "DEC",
+            "day": "12",
+            "title": "Golden Gardens",
             "description": "Come out for some trash pickup on Saturday, Dec. 12 at Golden Gardens! We will be leaving from UW at 1pm from in front of Schmitz. Hope ya'll come out!",
-            "fish": "jelly"
+            "fish": "jelly",
+            "going": "10",
+            "interested": "25",
+            "notgoing": "5"
         },
         {
             "ID": "02",
-            "date": "12/15/20",
-            "title": "Alki Beach Trash Pickup",
+            "month": "DEC",
+            "day": "15",
+            "title": "Alki Beach",
             "description": "Come out to pick up some trash on Alki Beach! It'll be on Tuesday, Dec. 15 and we will leave UW at 12pm from Willow Hall. Let's go make the world a better place!",
-            "fish": "cuttle"
+            "fish": "cuttle",
+            "going": "5",
+            "interested": "7",
+            "notgoing": "19"
+        },
+        {
+            "ID": "03",
+            "month": "DEC",
+            "day": "18",
+            "title": "Discovery Park",
+            "description": "Be there or be square!! Come to clean our local beaches on Friday, Dec. 18th at Discovery Park. Meet us in front of Odegaard Library at 1pm. We will have snacks!",
+            "fish": "clownfish",
+            "going": "12",
+            "interested": "6",
+            "notgoing": "10"
+        },
+        {
+            "ID": "04",
+            "month": "DEC",
+            "day": "20",
+            "title": "Alki Beach",
+            "description": "Beach cleanup scheduled for Sunday, Dec. 20th at Alki Beach. Meet up at 1pm in front of Suzzallo Library. It's getting cold out, dont forget to bring a jacket!",
+            "fish": "yellowtang",
+            "going": "11",
+            "interested": "7",
+            "notgoing": "25"
+        },
+        {
+            "ID": "05",
+            "month": "JAN",
+            "day": "4",
+            "title": "Golden Gardens",
+            "description": "This is my first time scheduling a beach cleanup! Please join me on Monday, Jan. 4th from in front of Schmitz at 3pm! Hope everyone had a great break!",
+            "fish": "cuttlefish",
+            "going": "2",
+            "interested": "19",
+            "notgoing": "14"
+        },
+        {
+            "ID": "06",
+            "month": "JAN",
+            "day": "7",
+            "title": "Discovery Park",
+            "description": "Beach cleanup and chill. My friends and I are hosting a beach cleanup on Thursday, Jan 7th. Time and meetup location TBD. HMU at student@email if you are interested!",
+            "fish": "clownfish",
+            "going": "6",
+            "interested": "12",
+            "notgoing": "15"
+        },
+        {
+            "ID": "07",
+            "month": "JAN",
+            "day": "9",
+            "title": "Golden Gardens Beach",
+            "description": "Hey everyone! Come join us for a beach cleanup on Saturday Jan 9th at 11am. Meeting at Golden Gardens Beach. Bring a lunch!",
+            "fish": "jellfish",
+            "going": "12",
+            "interested": "26",
+            "notgoing": "5"
+        },
+        {
+            "ID": "08",
+            "month": "JAN",
+            "day": "10",
+            "title": "Discovery Park",
+            "description": "Organizing a trash pickup with some friends, and we are looking for more people to join! Meetup at 1pm in front of Kane hall. Everyone is welcome, don't be shy, say HI!",
+            "fish": "cuttlefish",
+            "going": "16",
+            "interested": "12",
+            "notgoing": "20"
+        },
+        {
+            "ID": "09",
+            "month": "JAN",
+            "day": "16",
+            "title": "Alki Beach",
+            "description": "My RSO is participating in some community service at Alki beach to make an impact in our local communities. We will be picking up trash on Saturday, Jan 16th. Email us at rso@email for more info!",
+            "fish": "yellowtang",
+            "going": "32",
+            "interested": "25",
+            "notgoing": "8"
+        },
+        {
+            "ID": "10",
+            "month": "JAN",
+            "day": "17",
+            "title": "Golden Gardens",
+            "description": "Looking for people to help with trash pickup Sunday, Jan 17th. Meeting at Golden Gardens at 2pm. I have lots of extra cleaning supplies! ",
+            "fish": "clownfish",
+            "going": "15",
+            "interested": "22",
+            "notgoing": "8"
+        },
+        {
+            "ID": "11",
+            "month": "JAN",
+            "day": "17",
+            "title": "Alki Beach",
+            "description": "My friends and I were planning an Alki Beach trip, so we decided to just to help clean our beaches as well! 3pm meetup at Alki Beach! We love meeting new people!",
+            "fish": "cuttlefish",
+            "going": "4",
+            "interested": "2",
+            "notgoing": "20"
+        },
+        {
+            "ID": "12",
+            "month": "JAN",
+            "day": "22",
+            "title": "Discovery Park",
+            "description": "Come out to our scheduled beach cleanup on Friday! Sponsored by NZXT, so no need to bring any cleaning materials! Meeting at 1pm in front of Odegaard Library!",
+            "fish": "clownfish",
+            "going": "31",
+            "interested": "11",
+            "notgoing": "2"
+        },
+        {
+            "ID": "13",
+            "month": "JAN",
+            "day": "24",
+            "title": "Discovery Park",
+            "description": "Join us for a trash pickup on Sunday, Jan 24th. Meeting at 9am in front of Kane Hall. All the early risers unite!",
+            "fish": "yellowtang",
+            "going": "3",
+            "interested": "2",
+            "notgoing": "29"
+        },
+        {
+            "ID": "14",
+            "month": "JAN",
+            "day": "29",
+            "title": "Golden Gardens",
+            "description": "Large group planning to host a beach cleanup on the 29th! Please bring any extra supplies you have. Planning to meet at Golden Gardens at 3pm. Lets end this month with a bang!",
+            "fish": "jellyfish",
+            "going": "28",
+            "interested": "20",
+            "notgoing": "8"
         }
     ]
 }

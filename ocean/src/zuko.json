@@ -1,8 +1,10 @@
 {
-    "user": "Zuko Firenation",
+    "user": "Zuko",
+    "email":"",
+    "pic":"https://cdn.staticneo.com/w/avatar/thumb/Zuko.JPG/250px-Zuko.JPG",
     "fish": [
-        "jelly",
-        "clown"
+        "jelly-fish",
+        "clown-fish"
     ],
     "Image": [
         "image.png",
