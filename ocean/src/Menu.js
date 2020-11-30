@@ -68,7 +68,7 @@ class EventMenu extends Component{
                     <EventsList events={this.props.events} userEvents={this.props.user.events} aria-label="list-of-events"/>
                 </div>
             </div>
-        );
+        ); 
     }
 }
 
@@ -79,7 +79,7 @@ class EventsList extends Component{
         let userEvents = this.props.userEvents
         let items = this.props.events.events.map(function (event) {
             return (
-                <EventListItem event={event}  userEvents={userEvents} />
+                <EventListItem event={event}  userEvents={userEvents} aria-label="clean-up-event-card"/>
             )
         })
         return (
@@ -119,20 +119,20 @@ class EventListItem extends Component{
     render() {
         //console.log(this.state.userEvents)
         return (
-            <div class="events">
-                <div class = "date">
-                    <a class = "day">{this.props.event.day}</a>
-                    <a class = "month">{this.props.event.month}</a>
+            <div className="events">
+                <div className = "date">
+                    <p className = "day">{this.props.event.day}</p>
+                    <p className = "month">{this.props.event.month}</p>
                 </div>
-                <div class="description">
-                    <a class="title" >{this.props.event.title}</a>
-                    <a>{this.props.event.description}</a>
-                    <div class="attendance">
-                        <img src= "img/interested.png"></img>
+                <div className = "description">
+                    <p className = "title" >{this.props.event.title}</p>
+                    <p>{this.props.event.description}</p>
+                    <div className = "attendance">
+                        <img src= "img/interested.png" alt="interested-icon"></img>
                         <a>{this.props.event.interested}</a>
-                        <img src= "img/going.png"></img>
+                        <img src= "img/going.png" alt="rsvp-attending-icon"></img>
                         <a>{this.props.event.going}</a>
-                        <img src= "img/notgoing.png"></img>
+                        <img src= "img/notgoing.png" alt="rsvp-not-attending-icon"></img>
                         <a>{this.props.event.notgoing}</a>
                     </div>
                    {this.isUserInterested(this.props.userEvents, this.props.event.ID)}
