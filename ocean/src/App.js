@@ -21,13 +21,11 @@ export class App extends Component {
 
   switchUser = () =>{
     if(this.state.user.user === "Katara"){
-      console.log("switching to zuko")
       this.setState((currState) => {
         let stateChanges = { user: zukoUser};
         return stateChanges;
       }); 
     } else {
-      console.log("switching to katara")
      this.setState((currState) => {
         let stateChanges = { user: kataraUser};
         return stateChanges;
@@ -43,11 +41,9 @@ export class App extends Component {
         return stateChanges;
       });
     }
-    console.log(this.state.menuStatus)
   }
 
   render(){  
-    console.log("I am rendering: " + this.state.menuStatus)
     return (
       <div className="App">
         <MenuController switchMenuStatus={this.switchMenuStatus} menuStatus={this.state.menuStatus}/>
@@ -79,12 +75,10 @@ profileHandleClick = (event) =>{
 class MenuController extends Component{
   aquariumHandleClick = (event) =>{
     this.props.switchMenuStatus("aquarium");
-    console.log("it should be aquarium")
   }
 
   eventsHandleClick = (event) =>{
     this.props.switchMenuStatus("events");
-    console.log("it should be events")
   }
 
   aquarium = () => {

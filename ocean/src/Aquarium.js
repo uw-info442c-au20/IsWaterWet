@@ -5,23 +5,13 @@ const windowWidth = window.innerWidth - 180
 const windowHeight = window.innerHeight
 
 class Aquarium extends Component {
-
-    fishLog = () =>{
-        let fishes = this.props.user.fish
-        for(let item in fishes){
-            console.log(fishes[item])
-        }
-    } 
-
     fish = () =>{
 
             let items = this.props.user.fish.map(function (fish) {
-                console.log(fish)    
                 return (
                     <Fish fish={fish} />
                 ) 
             })
-            console.log(items)
             return (
                 <div>
                     {items}
@@ -29,7 +19,6 @@ class Aquarium extends Component {
             )
         
     }
-
 
     render() {
         return (

@@ -6,23 +6,7 @@ class Menu extends Component{
         super(props);
         this.state = {
             user: this.props.user,
-            eventsJSON: this.props.events,
-            events: [
-                {
-                    "ID": "01",
-                    "date": "12/12/20",
-                    "title": "Golden Gardens Beach Trash Pickup",
-                    "description": "Come out for some trash pickup on Saturday, Dec. 12 at Golden Gardens! We will be leaving from UW at 1pm from in front of Schmitz. Hope ya'll come out!",
-                    "fish": "jelly"
-                },
-                {
-                    "ID": "02",
-                    "date": "12/15/20",
-                    "title": "Alki Beach Trash Pickup",
-                    "description": "Come out to pick up some trash on Alki Beach! It'll be on Tuesday, Dec. 15 and we will leave UW at 12pm from Willow Hall. Let's go make the world a better place!",
-                    "fish": "cuttle"
-                }
-            ]
+            eventsJSON: this.props.events
         }
     }
 
@@ -30,12 +14,11 @@ class Menu extends Component{
           if(this.props.menuStatus === 'aquarium'){
             return (<FishMenu user={this.props.user}/>)
           } else if(this.props.menuStatus ==='events'){
-            return(<EventMenu events={this.state.eventsJSON}/>)
+            return(<EventMenu events={this.state.eventsJSON} user={this.props.user}/>)
           }
       }
 
     render(){
-        console.log(this.state.eventsJSON) //It looks like it is here!
         return(
             <div className = "menu">
                {this.whichMenu()}
@@ -47,7 +30,6 @@ class Menu extends Component{
 
 class FishMenu extends Component{
     render(){
-        console.log(this.props.user.fish)
             let items = this.props.user.fish.map(function (fish) {
                 if(fish === "clown-fish"){
                     return (
@@ -82,8 +64,8 @@ class EventMenu extends Component{
         return (
             <div>
                 <h1>Upcoming Events</h1>
-                <div class="event-contain" >
-                    <EventsList events={this.props.events}/>
+                <div className="event-contain" >
+                    <EventsList events={this.props.events} userEvents={this.props.user.events} aria-label="list-of-events"/>
                 </div>
             </div>
         );
@@ -94,15 +76,16 @@ class EventMenu extends Component{
 //All of the different events compiled within a list
 class EventsList extends Component{
     render(){
+        let userEvents = this.props.userEvents
         let items = this.props.events.events.map(function (event) {
             return (
-                <EventListItem key={event.id} event={event} />
+                <EventListItem event={event}  userEvents={userEvents} />
             )
         })
         return (
-            <a>
+            <div>
                 {items}
-            </a>
+            </div>
         )
     }
 }
@@ -117,6 +100,16 @@ class EventListItem extends Component{
         }
         this.handleClick = this.handleClick.bind(this);
       }
+
+      isUserInterested(userEvents, eventID){
+        for(let i in userEvents){
+            if(userEvents[i] === eventID){ //if the user is interested in the event
+                return (
+                    <p className="event-interested">You are interested in attending this event!</p>
+                )
+            }
+        }
+    }
     
       // changes the toggle state depending on click
       handleClick() {
@@ -124,6 +117,7 @@ class EventListItem extends Component{
       }
 
     render() {
+        //console.log(this.state.userEvents)
         return (
             <div class="events">
                 <div class = "date">
@@ -141,19 +135,10 @@ class EventListItem extends Component{
                         <img src= "img/notgoing.png"></img>
                         <a>{this.props.event.notgoing}</a>
                     </div>
-                    
+                   {this.isUserInterested(this.props.userEvents, this.props.event.ID)}
                 </div>
            
             </div>
-
-        // <div class="dropdown">
-        //     <div class = "drop">
-        //     <a active={false} onClick={this.handleClick} class="dropbtn">{this.props.event.date} {this.props.event.title} </a>
-        //     </div>
-        //     <div id="myDropdown" class="dropdown-content"  style={{display: this.state.isToggle ? 'block': 'none'}}>
-        //         <a>{this.props.event.description}</a>
-        //     </div>
-        // </div>
         )
     }
 }
