@@ -110,6 +110,26 @@ class EventListItem extends Component{
             }
         }
     }
+    interestedStatus(userEvents, eventID){
+        for(let i in userEvents){
+            if(userEvents[i] === eventID){ //icon for if the user is interested in the event
+                return (
+                    <div>
+                        <img src= "img/star.png" alt="-filled-icon"></img>
+                        <p>{this.props.event.interested}</p>
+                    </div>
+                )
+            }
+            else {
+                return (
+                    <div>
+                        <img src= "img/interested.png" alt="interested-icon"></img>
+                        <p>{this.props.event.interested}</p>
+                    </div>
+                )
+            }
+        }
+    }
     
       // changes the toggle state depending on click
       handleClick() {
@@ -127,15 +147,16 @@ class EventListItem extends Component{
                 <div className = "description">
                     <p className = "title" >{this.props.event.title}</p>
                     <p>{this.props.event.description}</p>
+                    <p className = "attend">{this.isUserInterested(this.props.userEvents, this.props.event.ID)}</p>
                     <div className = "attendance">
-                        <img src= "img/interested.png" alt="interested-icon"></img>
-                        <p>{this.props.event.interested}</p>
+                        {/* <img src= "img/interested.png" alt="interested-icon"></img>
+                        <p>{this.props.event.interested}</p> */}
+                        {this.interestedStatus(this.props.userEvents, this.props.event.ID)}
                         <img src= "img/going.png" alt="rsvp-attending-icon"></img>
                         <p>{this.props.event.going}</p>
                         <img src= "img/notgoing.png" alt="rsvp-not-attending-icon"></img>
                         <p>{this.props.event.notgoing}</p>
                     </div>
-                   {this.isUserInterested(this.props.userEvents, this.props.event.ID)}
                 </div>
            
             </div>
