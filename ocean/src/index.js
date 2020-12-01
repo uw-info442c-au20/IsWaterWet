@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import kataraUser from './katara.json';
-import zukoUser from './zuko.json';
 import events from './event.json';
 
 ReactDOM.render(
