@@ -155,7 +155,7 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 15vh;
+  height: 25vh;
   padding-top: 4rem;
   /* padding-bottom: 0rem; */
 }
@@ -270,9 +270,10 @@ footer .resources p{
   flex-direction: row;
 }
 
-.events .description .attendance a {
+.events .description .attendance p {
   padding-right: 2rem;
   padding-top: 1rem;
+  margin-top: 0rem;
   font-size: 0.85rem;
 }
 .events .description .attendance img {
