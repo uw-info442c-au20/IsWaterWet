@@ -50,7 +50,7 @@ class FishMenu extends Component{
                 }
             })
             return (
-                <div className="fish-menu">
+                <div className="fish-menu" aria-label="fish-menu">
                     {items}
                 </div>
             )
