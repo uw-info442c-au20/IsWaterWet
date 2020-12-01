@@ -114,18 +114,12 @@ class EventListItem extends Component{
         for(let i in userEvents){
             if(userEvents[i] === eventID){ //icon for if the user is interested in the event
                 return (
-                    <div>
                         <img src= "img/star.png" alt="-filled-icon"></img>
-                        <p>{this.props.event.interested}</p>
-                    </div>
                 )
             }
-            else {
+            else if (userEvents[i] ==! eventID){
                 return (
-                    <div>
                         <img src= "img/interested.png" alt="interested-icon"></img>
-                        <p>{this.props.event.interested}</p>
-                    </div>
                 )
             }
         }
@@ -152,6 +146,7 @@ class EventListItem extends Component{
                         {/* <img src= "img/interested.png" alt="interested-icon"></img>
                         <p>{this.props.event.interested}</p> */}
                         {this.interestedStatus(this.props.userEvents, this.props.event.ID)}
+                        <p>{this.props.event.interested}</p>
                         <img src= "img/going.png" alt="rsvp-attending-icon"></img>
                         <p>{this.props.event.going}</p>
                         <img src= "img/notgoing.png" alt="rsvp-not-attending-icon"></img>
