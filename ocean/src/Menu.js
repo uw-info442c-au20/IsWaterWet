@@ -129,11 +129,11 @@ class EventListItem extends Component{
                     <p>{this.props.event.description}</p>
                     <div className = "attendance">
                         <img src= "img/interested.png" alt="interested-icon"></img>
-                        <a>{this.props.event.interested}</a>
+                        <p>{this.props.event.interested}</p>
                         <img src= "img/going.png" alt="rsvp-attending-icon"></img>
-                        <a>{this.props.event.going}</a>
+                        <p>{this.props.event.going}</p>
                         <img src= "img/notgoing.png" alt="rsvp-not-attending-icon"></img>
-                        <a>{this.props.event.notgoing}</a>
+                        <p>{this.props.event.notgoing}</p>
                     </div>
                    {this.isUserInterested(this.props.userEvents, this.props.event.ID)}
                 </div>
