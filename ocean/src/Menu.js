@@ -111,17 +111,15 @@ class EventListItem extends Component{
     }
     interestedStatus(userEvents, eventID){
         for(let i in userEvents){
+            console.log("Am i interested?" + userEvents[i])
             if(userEvents[i] === eventID){ //icon for if the user is interested in the event
+                console.log("i am interested" + userEvents[i] +", " + eventID)
                 return (
                         <img src= "img/star.png" alt="-filled-icon"></img>
                 )
             }
-            else if (userEvents[i] ==! eventID){
-                return (
-                        <img src= "img/interested.png" alt="interested-icon"></img>
-                )
-            }
         }
+        return (<img src= "img/interested.png" alt="interested-icon"></img>)
     }
     
       // changes the toggle state depending on click
@@ -140,7 +138,8 @@ class EventListItem extends Component{
                 <div className = "description">
                     <p className = "title" >{this.props.event.title}</p>
                     <p>{this.props.event.description}</p>
-                    <p className = "attend">{this.isUserInterested(this.props.userEvents, this.props.event.ID)}</p>
+                    <p className = "attend">
+                    {this.isUserInterested(this.props.userEvents, this.props.event.ID)}</p>
                     <div className = "attendance">
                         {/* <img src= "img/interested.png" alt="interested-icon"></img>
                         <p>{this.props.event.interested}</p> */}
