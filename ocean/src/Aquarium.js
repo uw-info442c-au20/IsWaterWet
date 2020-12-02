@@ -20,11 +20,21 @@ class Aquarium extends Component {
         
     }
 
+    aquarium = () => {
+        if(this.props.user.fish.length > 2){
+            return "aquarium-background-advanced"
+        } else {
+            return "aquarium-background-basic"
+        }
+    }
+
+
     render() {
         return (
-             <div className="aquarium-background">
-                  {this.fish()} 
+             <div className={this.aquarium()}>                  
+             {this.fish()} 
              </div>
+
         );
     }
 }
