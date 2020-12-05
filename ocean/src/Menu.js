@@ -62,7 +62,7 @@ class FishMenu extends Component{
 class EventMenu extends Component{
     render() {
         return (
-            <div>
+            <div aria-label="events">
                 <h1>Upcoming Events</h1>
                 <div className="event-contain" >
                     <EventsList events={this.props.events} userEvents={this.props.user.events} aria-label="list-of-events"/>
@@ -130,16 +130,16 @@ class EventListItem extends Component{
         //console.log(this.state.userEvents)
         return (
             <div className="events">
-                <div className = "date">
+                <div className = "date" aria-label="event-date">
                     <p className = "day">{this.props.event.day}</p>
                     <p className = "month">{this.props.event.month}</p>
                 </div>
-                <div className = "description">
-                    <p className = "title" >{this.props.event.title}</p>
+                <div className = "description" aria-label="event-description">
+                    <p className = "title" aria-label="event-title">{this.props.event.title}</p>
                     <p>{this.props.event.description}</p>
                     <p className = "attend">
                     {this.isUserInterested(this.props.userEvents, this.props.event.ID)}</p>
-                    <div className = "attendance">
+                    <div className = "attendance" aria-label="attendance">
                         {/* <img src= "img/interested.png" alt="interested-icon"></img>
                         <p>{this.props.event.interested}</p> */}
                         {this.interestedStatus(this.props.userEvents, this.props.event.ID)}
