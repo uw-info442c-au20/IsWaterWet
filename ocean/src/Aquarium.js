@@ -31,7 +31,7 @@ class Aquarium extends Component {
 
     render() {
         return (
-             <div className={this.aquarium()}>                  
+             <div className={this.aquarium()} aria-label="aquarium">                  
              {this.fish()} 
              </div>
 
@@ -123,7 +123,7 @@ class Fish extends Component{
        
 
         let clownFish = (<div className= "fish">
-        <TweenOne
+        <TweenOne aria-label="clownfish"
          animation={{ 
             x: windowWidth,
             yoyo: true,
@@ -143,7 +143,7 @@ class Fish extends Component{
     </div>)
 
         let cuttleFish = (<div className= "fish">
-        <TweenOne
+        <TweenOne aria-label="cuttlefish"
         animation={{ 
             x: windowWidth,
             yoyo: true,
@@ -163,7 +163,7 @@ class Fish extends Component{
     </div>)
 
         let jellyFish = (<div className= "fish">
-        <TweenOne
+        <TweenOne aria-label="jellyfish"
         animation={{ 
             x: windowWidth,
             yoyo: true,
@@ -183,7 +183,7 @@ class Fish extends Component{
         </div>)
 
         let yellowTang = (<div className= "fish">
-            <TweenOne
+            <TweenOne aria-label="yellowtang"
             animation={{ 
                 x: windowWidth,
                 yoyo: true,

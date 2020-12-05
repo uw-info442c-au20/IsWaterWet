@@ -71,6 +71,14 @@ export class App extends Component {
       })
     }
   } 
+  
+  handleClickScrollButton = () => {
+    window.scroll({
+      top: 570,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
  
   render(){  
     return (
@@ -83,7 +91,7 @@ export class App extends Component {
           <img src="img/favicon.ico" alt="logo" className="logo"/>
           <Footer/>  
           {this.state.displayScroll?
-          <div className = "scrolly" >
+          <div className = "scrolly">
              <TweenOne 
             animation={{ 
                 y:15,
@@ -91,7 +99,7 @@ export class App extends Component {
                 repeat: -1, 
                 duration: 1000
             }}>
-            <img src="img/chevron.svg" alt="scroll-arrow"/>
+            <img src="img/chevron.svg" alt="scroll-arrow" onClick={this.handleClickScrollButton}/>
             </TweenOne>
           </div >
           : null}

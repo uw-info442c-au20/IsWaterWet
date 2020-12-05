@@ -49,7 +49,7 @@ class FishMenu extends Component{
                 }
             })
             return (
-                <div className="fish-menu">
+                <div className="fish-menu" aria-label="fish-menu">
                     {items}
                 </div>
             )
@@ -145,9 +145,9 @@ class EventListItem extends Component{
                         {this.interestedStatus(this.props.userEvents, this.props.event.ID)}
                         <p>{this.props.event.interested}</p>
                         <img src= "img/going.png" alt="rsvp-attending-icon"></img>
-                        <p>{this.props.event.going}</p>
+                        <p aria-label="attending">{this.props.event.going}</p>
                         <img src= "img/notgoing.png" alt="rsvp-not-attending-icon"></img>
-                        <p>{this.props.event.notgoing}</p>
+                        <p aria-label="not-attending">{this.props.event.notgoing}</p>
                     </div>
                 </div>
            
