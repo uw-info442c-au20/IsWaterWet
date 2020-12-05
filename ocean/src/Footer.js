@@ -8,11 +8,11 @@ export default class Footer extends React.Component {
                 <h1> SAVE OUR OCEANS</h1>
                 <p> "The greatest danger to our planet is the belief that someone else will <b>save it</b>" - Robert Swan</p>
                 <div className= "resources">
-                    <a href="https://www.un.org/sustainabledevelopment/oceans/"> Our Cause </a>
+                    <a href="https://www.un.org/sustainabledevelopment/oceans/" rel="noreferrer" target="_blank"> Our Cause </a>
                     <p>|</p>
-                    <a href="https://marine-conservation.org/why-protect-the-ocean/"> Why Protect the Ocean? </a>
+                    <a href="https://marine-conservation.org/why-protect-the-ocean/" rel="noreferrer" target="_blank"> Why Protect the Ocean? </a>
                     <p>|</p>
-                    <a href="https://time.com/5863821/saving-the-oceans/"> How Long Do We Have? </a>
+                    <a href="https://time.com/5863821/saving-the-oceans/" rel="noreferrer" target="_blank"> How Long Do We Have? </a>
                 </div>
             </footer>
         );
