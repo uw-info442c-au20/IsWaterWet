@@ -17,11 +17,20 @@ code {
   /*   overflow-y: scroll; */
 }
 
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  width: 60px;
+}
+
 .profile {
   position: absolute;
   top: 0;
   right: 0;
-  margin-right: 3rem;
+  margin-right: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;

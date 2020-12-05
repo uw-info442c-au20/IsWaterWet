@@ -75,12 +75,12 @@ export class App extends Component {
   render(){  
     return (
       <div>
-         <UserProfile user={this.state.user} switchUser={this.switchUser}/>
-          <MenuController switchMenuStatus={this.switchMenuStatus} menuStatus={this.state.menuStatus}/>
- 
         <div className="App"  onScroll = {this.handleScroll}>
           <Aquarium user={this.state.user}/>
           <Menu user={this.state.user} events={this.state.events} menuStatus={this.state.menuStatus}/>
+          <UserProfile user={this.state.user} switchUser={this.switchUser}/>
+          <MenuController switchMenuStatus={this.switchMenuStatus} menuStatus={this.state.menuStatus}/>
+          <img src="img/favicon.ico" alt="logo" className="logo"/>
           <Footer/>  
           {this.state.displayScroll?
           <div className = "scrolly" >
