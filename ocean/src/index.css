@@ -4,6 +4,7 @@ body {
   /* font-family: 'Montserrat', sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*   overflow-y: scroll; */
 }
 
 code {
@@ -13,6 +14,7 @@ code {
 .App {
   height: 100vh;
   width: 100%;
+  /*   overflow-y: scroll; */
 }
 
 .profile {
@@ -62,8 +64,8 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  overflow-x: visible;
-  overflow: visible;
+  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .aquarium-background-basic {
@@ -209,6 +211,22 @@ footer .resources p {
   margin-left: 2rem;
   margin-top: 1rem;
   font-weight: 600;
+}
+
+.scrolly {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 40;
+}
+
+.scrolly img {
+  width: 8rem;
 }
 
 /* With Dropdown */

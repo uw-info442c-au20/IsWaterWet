@@ -4,6 +4,7 @@ import './index.css';
 import Aquarium from './Aquarium';
 import Menu from './Menu';
 import Footer from './Footer'
+import TweenOne from 'rc-tween-one';
 
 import kataraUser from './katara.json';
 import zukoUser from './zuko.json';
@@ -15,9 +16,15 @@ export class App extends Component {
     this.state = {
       user: this.props.user,
       events: this.props.events,
-      menuStatus: "aquarium"
+      menuStatus: "aquarium",
+      scrollPosition: 0,
+      displayScroll: true
     }
   }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+ }
 
   switchUser = () =>{
     if(this.state.user.user === "Katara"){
@@ -43,15 +50,55 @@ export class App extends Component {
     }
   }
 
+  //Scroll Stuff
+  handleScroll = (event) =>{
+    console.log("hi")
+    let e = event.target
+    this.setState({
+      scrollPosition:window.pageYOffset
+    }, this.checkScroll)
+  }
+
+   checkScroll = () => {
+    if(this.state.scrollPosition < 250){
+      console.log(this.state.scrollPosition)
+      this.setState({
+        displayScroll:true
+      })
+    } else {
+      this.setState({
+        displayScroll:false
+      })
+    }
+  } 
+ 
   render(){  
     return (
-      <div className="App">
-        <MenuController switchMenuStatus={this.switchMenuStatus} menuStatus={this.state.menuStatus}/>
-        <Aquarium user={this.state.user}/>
-      <UserProfile user={this.state.user} switchUser={this.switchUser}/>
-        <Menu user={this.state.user} events={this.state.events} menuStatus={this.state.menuStatus}/>
-        <Footer/>  
+      <div>
+         <UserProfile user={this.state.user} switchUser={this.switchUser}/>
+          <MenuController switchMenuStatus={this.switchMenuStatus} menuStatus={this.state.menuStatus}/>
+ 
+        <div className="App"  onScroll = {this.handleScroll}>
+          <Aquarium user={this.state.user}/>
+          <Menu user={this.state.user} events={this.state.events} menuStatus={this.state.menuStatus}/>
+          <Footer/>  
+          {this.state.displayScroll?
+          <div className = "scrolly" >
+             <TweenOne 
+            animation={{ 
+                y:15,
+                yoyo: true,
+                repeat: -1, 
+                duration: 1000
+            }}>
+            <img src="img/chevron.svg" alt="scroll-arrow"/>
+            </TweenOne>
+          </div >
+          : null}
+        </div>
       </div>
+
+      
     );
   }
 }
@@ -103,6 +150,7 @@ class MenuController extends Component{
           <div className="menu-controller">
               <nav>
               <ul className="menu-list">
+
                       <ul>
                           {this.aquarium()}
                       </ul>

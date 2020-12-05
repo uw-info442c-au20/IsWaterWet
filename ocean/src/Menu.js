@@ -47,6 +47,7 @@ class FishMenu extends Component{
                         <img className = "img" src="img/Real-Cuttlefish.png" alt="Cuttle Fish"/>
                     )
                 }
+                return (<div/>)
             })
             return (
                 <div className="fish-menu">
@@ -111,9 +112,7 @@ class EventListItem extends Component{
     }
     interestedStatus(userEvents, eventID){
         for(let i in userEvents){
-            console.log("Am i interested?" + userEvents[i])
             if(userEvents[i] === eventID){ //icon for if the user is interested in the event
-                console.log("i am interested" + userEvents[i] +", " + eventID)
                 return (
                         <img src= "img/star.png" alt="-filled-icon"></img>
                 )
