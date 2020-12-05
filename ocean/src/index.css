@@ -106,10 +106,13 @@ code {
   text-align: center;
   z-index: 15;
   background-color: transparent;
+  padding-left: 0rem;
   /* display: flex; */
   /* flex-direction: row; */
 }
-
+ul.menu-list{
+  padding-left: 0rem;
+}
 .menu-list ul {
   list-style: none;
   display: inline;
@@ -117,14 +120,14 @@ code {
 
 .menu-list h1 {
   display: inline-block;
-  padding-right: 0.75rem;
+  padding-right: 0.25rem;
   font-size: 1.5rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: aliceblue;
   /* margin-left: auto;
   margin-right: auto; */
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
 }
 
 .menu-list h1:hover {
@@ -340,6 +343,7 @@ footer .resources p {
 @media (min-width: 786px) {
   .menu-list h1 {
     padding-right: 2rem;
+    font-size: 1.5rem;
   }
   .events .description .title {
     font-size: 1.2rem;
