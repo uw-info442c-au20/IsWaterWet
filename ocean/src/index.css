@@ -286,6 +286,13 @@ footer .resources p {
   margin-bottom: 0rem;
 }
 
+.events .description .fishname {
+  color: rgb(191, 242, 255);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0rem;
+}
+
 .events .date .day {
   font-size: 2.3rem;
   font-weight: 300;
@@ -314,19 +321,19 @@ footer .resources p {
   padding-right: 2rem;
   padding-top: 1rem;
   margin-top: 0rem;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
 }
 .events .description .attendance img {
-  padding-top: 1.15rem;
+  padding-top: 1.35rem;
   padding-right: 0.65rem;
   height: 0.85rem;
-  width: 0.85rem;
+  width: 1rem;
 }
 
 .events .event-interested {
   font-weight: bold;
   font-size: 0.9rem;
-  color: #acabe9;
+  color: #c5c4f8;
   margin-top: 2rem;
 }
 
