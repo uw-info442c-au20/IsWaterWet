@@ -32,22 +32,21 @@ class FishMenu extends Component{
             let items = this.props.user.fish.map(function (fish) {
                 if(fish === "clown-fish"){
                     return (
-                        <img className = "img" src="img/Real-Clownfish.png" alt="Clown Fish"/>
+                        <img className = "img" src="img/jelly.png" alt="Jelly Fish"/>
                     )
                 } else if(fish === "jelly-fish"){
                     return (
-                        <img className = "img" src="img/Real-Jellyfish.png" alt="Jelly Fish"/>
+                        <img className = "img" src="img/clown.png" alt="Clown Fish"/>
                     )
                 } else if(fish === "yellow-tang"){
                     return (
-                        <img className = "img" src="img/Real-Yellowtang.png" alt="Yellowtang"/>
+                        <img className = "img" src="img/cuttle.png" alt="Cuttlefish"/>
                     )
                 } else if(fish === "cuttle-fish"){
                     return (
-                        <img className = "img" src="img/Real-Cuttlefish.png" alt="Cuttle Fish"/>
+                        <img className = "img" src="img/yellow.png" alt="Yellow Tang"/>
                     )
                 }
-                return (<div/>)
             })
             return (
                 <div className="fish-menu">
@@ -137,6 +136,7 @@ class EventListItem extends Component{
                 <div className = "description" aria-label="event-description">
                     <p className = "title" aria-label="event-title">{this.props.event.title}</p>
                     <p>{this.props.event.description}</p>
+                    <p className = "fishname"> Adds &#128032; {this.props.event.fish} &#128032; to your aquarium!</p>
                     <p className = "attend">
                     {this.isUserInterested(this.props.userEvents, this.props.event.ID)}</p>
                     <div className = "attendance" aria-label="attendance">
